@@ -17,8 +17,7 @@ if selected == 'Klasifikasi':
     if file is not None:
         input_data = pd.read_csv(file)
 
-        model_directory = r'D:\Funiversity\Sem5\ML\UTS\Projek UTS PMDPM_B_pytorch'
-        model_path = os.path.join(model_directory, r'BestModel_CLF_GBT_pytorch.pkl')
+        model_path = r'BestModel_CLF_GBT_pytorch.pkl'
 
         if os.path.exists(model_path):
             with open(model_path, 'rb') as f:
@@ -94,8 +93,7 @@ if selected == 'Regresi':
     if file is not None:
         input_data = pd.read_csv(file)
 
-        model_directory = r'D:\Funiversity\Sem5\ML\UTS\Projek UTS PMDPM_B_pytorch'
-        model_path = os.path.join(model_directory, r'BestModel_REG_RFR_pytorch.pkl')
+        model_path = r'BestModel_REG_RFR_pytorch.pkl'
 
         if os.path.exists(model_path):
             with open(model_path, 'rb') as f:
