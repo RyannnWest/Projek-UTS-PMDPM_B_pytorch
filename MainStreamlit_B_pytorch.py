@@ -22,10 +22,8 @@ if selected == 'Klasifikasi':
         if os.path.exists(model_path):
             with open(model_path, 'rb') as f:
                 loaded_model = pickle.load(f)
-
-            scaler = loaded_model[0]
-            feature_selector = loaded_model[1]
-            GBT_model = loaded_model[2]
+                
+            GBT_model = loaded_model
 
             squaremeters = st.number_input("Square Meters", 0)
             numberofrooms = st.slider("Number of Rooms", 0, 100)
@@ -76,9 +74,6 @@ if selected == 'Klasifikasi':
                           squaremeters, numberofrooms, floors, citycode, citypartrange, numprevowners,
                           made, basement, attic, garage, hasguestroom]
         
-            input_data_scaled = scaler.transform
-            input_data_selected = feature_selector.transform(input_data_scaled)
-
         if st.button("Prediksi"):
             GBT_model_prediction = GBT_model.predict(input_data)
             outcome = {0: 'Basic', 1: 'Middle', 2:'Luxury'}
