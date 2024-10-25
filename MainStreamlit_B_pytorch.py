@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import os
-from streamlit_option_menu import option_menu # type: ignore
+from streamlit_option_menu import option_menu
 
 with st.sidebar:
     selected = option_menu('Desain Steamlit UTS ML 24/25',
