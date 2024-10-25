@@ -125,7 +125,7 @@ if selected == 'Klasifikasi':
             #     st.error("Prediksi tidak dapat dikonversi ke kategori yang diharapkan.")
 
             outcome = {'Basic': 'Basic', 'Middle': 'Middle', 'Luxury': 'Luxury'}
-            st.write(f"Bangunan tersebut masuk ke Kategori: **{outcome[GBT_model_prediction[0]]}**")
+            st.write(f"Prediksi Bangunan tersebut masuk ke Kategori: **{outcome[GBT_model_prediction[0]]}**")
 
             
 
